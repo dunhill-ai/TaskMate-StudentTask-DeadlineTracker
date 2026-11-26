@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMate | Dashboard</title>
+ <link rel="stylesheet" href="./style.css">
+<script src="./script.js" defer></script>
+</head>
+<body data-page="dashboard">
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-icon">✓</span><span>TaskMate<small>STUDENT ORGANIZER</small></span></a>
+      <p class="nav-label">MENU</p>
+      <nav class="nav">
+        <a class="nav-link active" href="index.html"><span>▦</span> Dashboard</a>
+        <a class="nav-link" href="tasks.html"><span>☷</span> My Tasks</a>
+        <a class="nav-link" href="deadlines.html"><span>◷</span> Deadlines</a>
+        <a class="nav-link" href="completed.html"><span>✓</span> Completed</a>
+        <p class="nav-label">MORE</p>
+        <a class="nav-link" href="about.html"><span>ⓘ</span> About TaskMate</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-icon">✦</div><strong>Stay organized!</strong><p>Small progress every day leads to big results.</p></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><p class="eyebrow">STUDENT WORKSPACE</p><h2>Dashboard</h2></div>
+        <div class="profile"><div class="avatar">S</div><div><strong class="student-name">Student</strong><small>Student Account</small></div><button class="icon-button" id="editName" title="Edit name">✎</button></div>
+      </header>
+
+      <section class="welcome">
+        <div><p class="welcome-label">YOUR PERSONAL STUDY SPACE</p><h1>Welcome back, <span class="student-name">Student</span>! 👋</h1><p>Stay focused, manage your tasks, and make today productive.</p></div>
+        <a class="btn btn-light" href="tasks.html">＋ Add New Task</a>
+      </section>
+
+      <section class="section-heading"><div><h2>Overview</h2><p>Here's a quick look at your academic progress.</p></div></section>
+      <section class="stats-grid">
+        <article class="stat-card"><div class="stat-top"><span>Total Tasks</span><span class="stat-icon green">☷</span></div><strong id="totalTasks">0</strong><small>All your academic tasks</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Pending Tasks</span><span class="stat-icon orange">◷</span></div><strong id="pendingTasks">0</strong><small>Tasks waiting to be done</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Completed</span><span class="stat-icon blue">✓</span></div><strong id="completedTasks">0</strong><small>Tasks successfully finished</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Overdue</span><span class="stat-icon red">!</span></div><strong id="overdueTasks">0</strong><small>Tasks past their due date</small></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <div class="panel-heading"><div><h2>Recent Tasks</h2><p>Your latest academic activities</p></div><a href="tasks.html" class="text-link">View all →</a></div>
+          <div class="table-wrap"><table><thead><tr><th>Task Name</th><th>Subject</th><th>Due Date</th><th>Priority</th><th>Status</th></tr></thead><tbody id="dashboardTasks"><tr><td colspan="5" class="empty">No tasks yet. Add your first task!</td></tr></tbody></table></div>
+        </article>
+        <article class="panel progress-panel">
+          <div class="panel-heading"><div><h2>My Progress</h2><p>Your task completion rate</p></div></div>
+          <div class="progress-ring" id="progressRing"><div><strong id="progressPercent">0%</strong><small>Completed</small></div></div>
+          <p class="progress-caption" id="progressCaption">Start adding tasks to track your progress.</p>
+          <a href="completed.html" class="btn btn-outline full-width">View Completed Tasks</a>
+        </article>
+      </section>
+
+      <section class="panel quick-panel"><div class="panel-heading"><div><h2>Quick Access</h2><p>Go directly to the section you need.</p></div></div><div class="quick-links"><a href="tasks.html"><span>＋</span><div><strong>Manage Tasks</strong><small>Add and organize activities</small></div><b>→</b></a><a href="deadlines.html"><span>◷</span><div><strong>Upcoming Deadlines</strong><small>Check your due dates</small></div><b>→</b></a><a href="completed.html"><span>✓</span><div><strong>Completed Tasks</strong><small>Review finished work</small></div><b>→</b></a></div></section>
+      <footer>© 2026 TaskMate. Student Task & Deadline Tracker.</footer>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMate | My Tasks</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="tasks">
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-icon">✓</span><span>TaskMate<small>STUDENT ORGANIZER</small></span></a>
+      <p class="nav-label">MENU</p>
+      <nav class="nav">
+        <a class="nav-link" href="index.html"><span>▦</span> Dashboard</a>
+        <a class="nav-link active" href="tasks.html"><span>☷</span> My Tasks</a>
+        <a class="nav-link" href="deadlines.html"><span>◷</span> Deadlines</a>
+        <a class="nav-link" href="completed.html"><span>✓</span> Completed</a>
+        <p class="nav-label">MORE</p>
+        <a class="nav-link" href="about.html"><span>ⓘ</span> About TaskMate</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-icon">✦</div><strong>Stay organized!</strong><p>Small progress every day leads to big results.</p></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div><p class="eyebrow">STUDENT WORKSPACE</p><h2>My Tasks</h2></div><div class="profile"><div class="avatar">S</div><div><strong class="student-name">Student</strong><small>Student Account</small></div><button class="icon-button" id="editName" title="Edit name">✎</button></div></header>
+      <section class="page-intro"><div><h1>Manage Your Tasks</h1><p>Create, organize, and monitor all your academic activities in one place.</p></div></section>
+
+      <section class="panel form-panel">
+        <div class="panel-heading"><div><h2 id="formTitle">＋ Add New Task</h2><p>Enter the details of your academic activity.</p></div></div>
+        <form id="taskForm">
+          <input type="hidden" id="taskId">
+          <div class="form-grid">
+            <label>Task Name<input type="text" id="taskName" placeholder="e.g. Complete research paper" required></label>
+            <label>Subject<input type="text" id="taskSubject" placeholder="e.g. IT111" required></label>
+            <label>Due Date<input type="date" id="taskDate" required></label>
+            <label>Priority<select id="taskPriority" required><option value="Medium">Medium</option><option value="High">High</option><option value="Low">Low</option></select></label>
+          </div>
+          <div class="form-actions"><button type="submit" class="btn btn-primary" id="submitTask">＋ Add Task</button><button type="button" class="btn btn-muted hidden" id="cancelEdit">Cancel</button></div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading"><div><h2>All Tasks</h2><p>View and manage your academic activities.</p></div><span class="count-pill" id="taskCount">0 tasks</span></div>
+        <div class="toolbar"><input type="search" id="taskSearch" placeholder="⌕ Search task or subject..."><select id="taskFilter"><option value="All">All Tasks</option><option value="Pending">Pending</option><option value="Completed">Completed</option><option value="Overdue">Overdue</option></select></div>
+        <div class="table-wrap"><table><thead><tr><th>Task Name</th><th>Subject</th><th>Due Date</th><th>Priority</th><th>Status</th><th>Actions</th></tr></thead><tbody id="taskTable"><tr><td colspan="6" class="empty">No tasks found.</td></tr></tbody></table></div>
+      </section>
+      <footer>© 2026 TaskMate. Student Task & Deadline Tracker.</footer>
+    </main>
+  </div>
+</body>
+</html>
