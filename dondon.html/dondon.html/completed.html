@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMate | Completed Tasks</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="completed">
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-icon">✓</span><span>TaskMate<small>STUDENT ORGANIZER</small></span></a>
+      <p class="nav-label">MENU</p>
+      <nav class="nav">
+        <a class="nav-link" href="index.html"><span>▦</span> Dashboard</a>
+        <a class="nav-link" href="tasks.html"><span>☷</span> My Tasks</a>
+        <a class="nav-link" href="deadlines.html"><span>◷</span> Deadlines</a>
+        <a class="nav-link active" href="completed.html"><span>✓</span> Completed</a>
+        <p class="nav-label">MORE</p>
+        <a class="nav-link" href="about.html"><span>ⓘ</span> About TaskMate</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-icon">✦</div><strong>Great work!</strong><p>Every completed task is a step toward success.</p></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div><p class="eyebrow">STUDENT WORKSPACE</p><h2>Completed Tasks</h2></div><div class="profile"><div class="avatar">S</div><div><strong class="student-name">Student</strong><small>Student Account</small></div><button class="icon-button" id="editName" title="Edit name">✎</button></div></header>
+      <section class="page-intro"><div><h1>You've Made Progress! 🎉</h1><p>Review the academic activities you have successfully completed.</p></div></section>
+      <section class="stats-grid">
+        <article class="stat-card"><div class="stat-top"><span>Completed Tasks</span><span class="stat-icon green">✓</span></div><strong id="completedTotal">0</strong><small>Successfully finished</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Total Tasks</span><span class="stat-icon blue">☷</span></div><strong id="allTotal">0</strong><small>All recorded tasks</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Completion Rate</span><span class="stat-icon orange">↗</span></div><strong id="completedRate">0%</strong><small>Your overall progress</small></article>
+      </section>
+      <section class="panel"><div class="panel-heading"><div><h2>Finished Activities</h2><p>Your completed academic tasks.</p></div></div><div class="table-wrap"><table><thead><tr><th>Task Name</th><th>Subject</th><th>Due Date</th><th>Priority</th><th>Status</th><th>Action</th></tr></thead><tbody id="completedTable"><tr><td colspan="6" class="empty">No completed tasks yet.</td></tr></tbody></table></div></section>
+      <footer>© 2026 TaskMate. Student Task & Deadline Tracker.</footer>
+    </main>
+  </div>
+</body>
+</html>

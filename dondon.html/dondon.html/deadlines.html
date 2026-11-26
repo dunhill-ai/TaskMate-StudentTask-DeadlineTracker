@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMate | Deadlines</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="deadlines">
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-icon">✓</span><span>TaskMate<small>STUDENT ORGANIZER</small></span></a>
+      <p class="nav-label">MENU</p>
+      <nav class="nav">
+        <a class="nav-link" href="index.html"><span>▦</span> Dashboard</a>
+        <a class="nav-link" href="tasks.html"><span>☷</span> My Tasks</a>
+        <a class="nav-link active" href="deadlines.html"><span>◷</span> Deadlines</a>
+        <a class="nav-link" href="completed.html"><span>✓</span> Completed</a>
+        <p class="nav-label">MORE</p>
+        <a class="nav-link" href="about.html"><span>ⓘ</span> About TaskMate</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-icon">✦</div><strong>Stay organized!</strong><p>Small progress every day leads to big results.</p></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div><p class="eyebrow">STUDENT WORKSPACE</p><h2>Deadlines</h2></div><div class="profile"><div class="avatar">S</div><div><strong class="student-name">Student</strong><small>Student Account</small></div><button class="icon-button" id="editName" title="Edit name">✎</button></div></header>
+      <section class="page-intro"><div><h1>Upcoming Deadlines</h1><p>Keep track of your due dates and stay ahead of your academic responsibilities.</p></div><a href="tasks.html" class="btn btn-primary">＋ Add Task</a></section>
+      <section class="stats-grid three-stats">
+        <article class="stat-card"><div class="stat-top"><span>Upcoming</span><span class="stat-icon green">◷</span></div><strong id="upcomingCount">0</strong><small>Future due dates</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Due Today</span><span class="stat-icon orange">!</span></div><strong id="todayCount">0</strong><small>Tasks due today</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Overdue</span><span class="stat-icon red">⌛</span></div><strong id="deadlineOverdue">0</strong><small>Past due dates</small></article>
+      </section>
+      <section class="panel"><div class="panel-heading"><div><h2>Your Deadline Schedule</h2><p>Pending tasks arranged by due date.</p></div></div><div id="deadlineList" class="deadline-list"><p class="empty">No upcoming deadlines.</p></div></section>
+      <footer>© 2026 TaskMate. Student Task & Deadline Tracker.</footer>
+    </main>
+  </div>
+</body>
+</html>
